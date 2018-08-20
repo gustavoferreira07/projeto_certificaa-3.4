@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E6E005C0-6E4C-4D29-86AC-6224287E4E3E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>projeto_certifica</RootNamespace>
+    <AssemblyName>projeto_certifica</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge">
+      <HintPath>..\..\..\..\..\Desktop\Release\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Imaging">
+      <HintPath>..\..\..\..\..\Desktop\Release\AForge.Imaging.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video">
+      <HintPath>..\..\..\..\..\Desktop\Release\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow">
+      <HintPath>..\..\..\..\..\Desktop\Release\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.9.9\lib\net45\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controlador\Aprova_ocorrencia.cs" />
+    <Compile Include="Controlador\Excluir_usuario.cs" />
+    <Compile Include="Controlador\Lista_DataGrids.cs" />
+    <Compile Include="Controlador\Listar_orcamento.cs" />
+    <Compile Include="Controlador\SalvarUsuario.cs" />
+    <Compile Include="Controlador\Salvar_ocorrencia.cs" />
+    <Compile Include="Controlador\Salva_edit.cs" />
+    <Compile Include="Controlador\Salva_orcamento.cs" />
+    <Compile Include="Controlador\Variaveis_globais.cs" />
+    <Compile Include="Repositorio\Historico.cs" />
+    <Compile Include="Repositorio\Ocorrencia.cs" />
+    <Compile Include="Repositorio\Orcamento.cs" />
+    <Compile Include="Repositorio\Usuario.cs" />
+    <Compile Include="telas\tela_adiciona_servico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="telas\tela_adiciona_servico.Designer.cs">
+      <DependentUpon>tela_adiciona_servico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="telas\tela_alterar_senha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="telas\tela_alterar_senha.Designer.cs">
+      <DependentUpon>tela_alterar_senha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="telas\tela_cadastro_usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="telas\tela_cadastro_usuario.Designer.cs">
+      <DependentUpon>tela_cadastro_usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="telas\tela_consulta_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="telas\tela_consulta_form.Designer.cs">
+      <DependentUpon>tela_consulta_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="telas\tela_consulta_ocorrencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="telas\tela_consulta_ocorrencia.Designer.cs">
+      <DependentUpon>tela_consulta_ocorrencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="telas\tela_consulta_orcamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="telas\tela_consulta_orcamento.Designer.cs">
+      <DependentUpon>tela_consulta_orcamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="telas\tela_consulta_todos_orcamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="telas\tela_consulta_todos_orcamentos.Designer.cs">
+      <DependentUpon>tela_consulta_todos_orcamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="telas\tela_consulta_usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="telas\tela_consulta_usuario.Designer.cs">
+      <DependentUpon>tela_consulta_usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="telas\tela_gerar_ocorrencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="telas\tela_gerar_ocorrencia.Designer.cs">
+      <DependentUpon>tela_gerar_ocorrencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="telas\tela_historico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="telas\tela_historico.Designer.cs">
+      <DependentUpon>tela_historico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="telas\tela_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="telas\tela_login.Designer.cs">
+      <DependentUpon>tela_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="telas\tela_orcamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="telas\tela_orcamento.Designer.cs">
+      <DependentUpon>tela_orcamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="telas\tela_principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="telas\tela_principal.Designer.cs">
+      <DependentUpon>tela_principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="telas\tela_recibo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="telas\tela_recibo.Designer.cs">
+      <DependentUpon>tela_recibo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="telas\tela_visualisa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="telas\tela_visualisa.Designer.cs">
+      <DependentUpon>tela_visualisa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="utilitario\Conexao.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="telas\tela_adiciona_servico.resx">
+      <DependentUpon>tela_adiciona_servico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="telas\tela_alterar_senha.resx">
+      <DependentUpon>tela_alterar_senha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="telas\tela_cadastro_usuario.resx">
+      <DependentUpon>tela_cadastro_usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="telas\tela_consulta_form.resx">
+      <DependentUpon>tela_consulta_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="telas\tela_consulta_ocorrencia.resx">
+      <DependentUpon>tela_consulta_ocorrencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="telas\tela_consulta_orcamento.resx">
+      <DependentUpon>tela_consulta_orcamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="telas\tela_consulta_todos_orcamentos.resx">
+      <DependentUpon>tela_consulta_todos_orcamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="telas\tela_gerar_ocorrencia.resx">
+      <DependentUpon>tela_gerar_ocorrencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="telas\tela_historico.resx">
+      <DependentUpon>tela_historico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="telas\tela_login.resx">
+      <DependentUpon>tela_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="telas\tela_orcamento.resx">
+      <DependentUpon>tela_orcamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="telas\tela_principal.resx">
+      <DependentUpon>tela_principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="telas\tela_recibo.resx">
+      <DependentUpon>tela_recibo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="telas\tela_visualisa.resx">
+      <DependentUpon>tela_visualisa.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_certifica.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_male-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1498721376_login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1498877543_f-check_256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1498877552_f-cross_256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1498973848_Update.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\office-41-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\outline_search_lupa_find-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aami2-71-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aami18-48-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\simple-60-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\simple-06-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thin-426_database_drives_raid_db_storage_nas_backup-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5004-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_gnome-fs-directory-active_48047.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo original.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_page_attach_36243.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_printer_12308.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

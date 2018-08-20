@@ -1,0 +1,237 @@
+﻿create database db_ocorrencia;
+
+use db_ocorrencia;
+
+
+
+
+create table tb_usuario
+(
+
+
+id_usuario int auto_increment not null primary key,
+
+nm_usuario  varchar(20),
+
+nm_senha varchar(20),
+
+unique(nm_usuario),
+
+nm_cargo varchar(20)
+
+);
+
+
+
+
+
+create table tb_ocorrencia
+(
+
+id_ocorrencia varchar(15) not null primary key,
+
+nm_usuario varchar(20),
+
+status_ocorrencia varchar(25),
+
+nm_proprietario varchar(60),
+
+cpf_proprietario varchar(15),
+
+celular_proprietario varchar(15),
+
+endereco_proprietario varchar(60),
+
+rg_proprietario varchar(13),
+
+cnh_proprietario varchar(20),
+
+renavan varchar(15),
+
+modelo_carro varchar(20),
+
+placa varchar(8)
+,
+cor varchar(15),
+
+ano varchar(12),
+
+ds_ocorrencia varchar(500),
+
+data_entrada varchar(15),
+
+hora_entrada varchar(5),
+
+area varchar(1),
+
+img_entrada longblob,
+
+img_saida longblob,
+
+img_avaria longblob,
+
+img_ocorrencia longblob,
+
+pergunta1 varchar(4),
+
+pergunta2 varchar(4),
+
+pergunta3 varchar(4),
+
+pergunta4 varchar(4),
+
+pergunta5 varchar(4),
+
+pergunta6 varchar(4),
+
+pergunta7 varchar(4),
+
+pergunta8 varchar(4)
+
+);
+
+create tabel tb_historico
+(
+id_historico int auto increment primary key,
+id_ocorrencia varcahr(10),
+nm_usuari varchar(20),
+data_edit DATETIME
+);
+
+create table tb_orcamento
+(
+id_orcamento int auto increment primary key,
+id_ocorrencia varchar(20),
+status_orcamento varchar (30),
+tipo_orcamento varchar(30),
+ds_orcamento varchar(600),
+data_conclusao varchar(11),
+valor double,
+motivo_status varchar(600),
+img_recibo longblob
+);
+
+create table tb_servico
+(
+id_servico int auto increment,
+nm_servico varchar(60)
+);
+
+
+
+
+-------------------------------------------------------------------
+
+
+as begin
+declare @id as varchar(10)
+declare @nm as varchar(20)
+declare @dia as Datetime
+
+--atribui o valor das variáveis
+set @id =(select id_ocorrencia from UPDATE)
+set @nm =(select nm_usuario from update)
+set @dia = GETDATE()
+
+insert from tb_historico(id_ocorrencia, nm_usuario, dia_edit where id_ocorrencia) 
+values(@id,@nm,@dia)
+
+
+end
+
+
+---------------------------------------------------------------------
+
+
+
+
+
+create table tb_edit
+(
+
+id_edit int auto_increment not null primary key,
+
+id_ocorrencia varchar(10)
+,
+nm_usuario varchar(20),
+
+dia_edit varchar(20),
+
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DELIMITER $$;
+CREATE TRIGGER baixaDeEstoque
+AFTER UPDATE ON pedidos
+FOR EACH ROW
+if NEW.status <=> OLD.status AND NEW.status = 'pago' 
+BEGIN
+   UPDATE estoque
+   INNER JOIN itens ON estoque.id = itens.tamanho
+   SET quantidade = quantidade-1
+   WHERE itens.pedido = NEW.id;
+END$$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+select * from tb_ocorrencia;
+
+update tb_ocorrencia 
+set status_ocorrencia='aprovado pela gerência'
+where id_ocorrencia='6'
+
+
+
+
+
+
+
+

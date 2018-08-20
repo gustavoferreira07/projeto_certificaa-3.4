@@ -1,0 +1,16 @@
+C:\Users\gferreira\Desktop\projeto_certificaa 2.4\projeto_certifica\obj\x86\Release\projeto_certifica.csprojResolveAssemblyReference.cache
+C:\Users\gferreira\Desktop\projeto_certificaa 2.4\projeto_certifica\obj\x86\Release\projeto_certifica.telas.tela_alterar_senha.resources
+C:\Users\gferreira\Desktop\projeto_certificaa 2.4\projeto_certifica\obj\x86\Release\projeto_certifica.telas.tela_cadastro_usuario.resources
+C:\Users\gferreira\Desktop\projeto_certificaa 2.4\projeto_certifica\obj\x86\Release\projeto_certifica.telas.tela_consulta_form.resources
+C:\Users\gferreira\Desktop\projeto_certificaa 2.4\projeto_certifica\obj\x86\Release\projeto_certifica.telas.tela_consulta_ocorrencia.resources
+C:\Users\gferreira\Desktop\projeto_certificaa 2.4\projeto_certifica\obj\x86\Release\projeto_certifica.telas.tela_consulta_orcamento.resources
+C:\Users\gferreira\Desktop\projeto_certificaa 2.4\projeto_certifica\obj\x86\Release\projeto_certifica.telas.tela_consulta_todos_orcamentos.resources
+C:\Users\gferreira\Desktop\projeto_certificaa 2.4\projeto_certifica\obj\x86\Release\projeto_certifica.telas.tela_consulta_usuario.resources
+C:\Users\gferreira\Desktop\projeto_certificaa 2.4\projeto_certifica\obj\x86\Release\projeto_certifica.telas.tela_gerar_ocorrencia.resources
+C:\Users\gferreira\Desktop\projeto_certificaa 2.4\projeto_certifica\obj\x86\Release\projeto_certifica.telas.tela_historico.resources
+C:\Users\gferreira\Desktop\projeto_certificaa 2.4\projeto_certifica\obj\x86\Release\projeto_certifica.Form1.resources
+C:\Users\gferreira\Desktop\projeto_certificaa 2.4\projeto_certifica\obj\x86\Release\projeto_certifica.Properties.Resources.resources
+C:\Users\gferreira\Desktop\projeto_certificaa 2.4\projeto_certifica\obj\x86\Release\projeto_certifica.telas.tela_orcamento.resources
+C:\Users\gferreira\Desktop\projeto_certificaa 2.4\projeto_certifica\obj\x86\Release\projeto_certifica.telas.tela_principal.resources
+C:\Users\gferreira\Desktop\projeto_certificaa 2.4\projeto_certifica\obj\x86\Release\projeto_certifica.telas.tela_visualisa.resources
+C:\Users\gferreira\Desktop\projeto_certificaa 2.4\projeto_certifica\obj\x86\Release\projeto_certifica.csproj.GenerateResource.Cache
